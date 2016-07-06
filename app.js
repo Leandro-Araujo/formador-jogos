@@ -17,10 +17,10 @@ const createTimes = (quant)=>{
 		const time = new Time();
 		time.id = i;
 		time.nome = name[i];
-		times[i] = time;
-		console.log(times);
+		times[i] = time;		
 	}
+	return times;
 };
 
 
-createTimes(5);
+console.log( createTimes(5) );
