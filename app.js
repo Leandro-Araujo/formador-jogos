@@ -2,21 +2,22 @@
 // Este sistema servira para criar os jogos entre os times
 
 const Time = function(id =0, nome = 'A', pontos = 0){
-	this.id = id;
-	this.nome = nome;
+	this.id     = id;
+	this.nome   = nome;
 	this.pontos = pontos;
 };
 
-const Jogos = function(id = 0, time1, time2, data){
-	this.id = id;
-	this.time1 = time1;
-	this.time2 = time2;
-	this.data = data;
+const Jogo = function(id = 0, time1, time2, data){
+	this.id     = id;
+	this.time1  = time1;
+	this.time2  = time2;
+	this.data   = data;
 };
 
 const name = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 let times = [];
+let jogos = [];
 
 //const time = new Time();
 
@@ -28,5 +29,10 @@ const createTimes = (quant)=>{
 	return times;
 };
 
+const createJogos = (quant)=>{
+	let times = createTimes(quant);
+	let partidas = quant -1;
+	console.log(times);
+};
 
-console.log( createTimes(5) );
+createJogos(5);
